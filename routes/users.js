@@ -484,11 +484,7 @@ module.exports = function(router){
 
             await user.deleteOne();
 
-            res.status(200).json({
-                message: "User deleted successfully",
-                data: user
-            });
-
+            return res.status(204).send();
         }
         catch(err){
             res.status(500).json({

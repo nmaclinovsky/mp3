@@ -437,10 +437,9 @@ module.exports = function(router){
 
             await task.deleteOne();
 
-            res.status(200).json({
-                message:"Task deleted successfully",
-                data: task
-            });
+            
+
+            return res.status(204).send();
 
         }
         
